@@ -16,6 +16,8 @@
 
     <!-- App css  (Mandatory in All Pages) -->
     <link href="assets/css/app.min.css" rel="stylesheet" type="text/css">
+    @vite('resources/css/app.css')
+
 </head>
 
 <body>
