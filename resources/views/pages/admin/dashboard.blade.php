@@ -130,7 +130,7 @@
                         <tbody class="divide-y divide-default-200">
                             <tr class="hover:bg-default-50">
                                 <td class="px-4 py-2 flex items-center gap-2">
-                                    <img src="assets/images/users/avatar-4.jpg" alt="table-user"
+                                    <img src="{{ asset('assets/images/users/avatar-4.jpg') }}" alt="table-user"
                                         class="size-9 rounded-full">
                                     <a href="javascript:void(0);" class="font-semibold text-default-800">Paul
                                         J. Friend</a>
@@ -142,7 +142,7 @@
                             </tr>
                             <tr class="hover:bg-default-50">
                                 <td class="px-4 py-2 flex items-center gap-2">
-                                    <img src="assets/images/users/avatar-3.jpg" alt="table-user"
+                                    <img src="{{ asset('assets/images/users/avatar-3.jpg') }}" alt="table-user"
                                         class="size-9 rounded-full">
                                     <a href="javascript:void(0);" class="font-semibold text-default-800">Bryan
                                         J. Luellen</a>
@@ -154,7 +154,7 @@
                             </tr>
                             <tr class="hover:bg-default-50">
                                 <td class="px-4 py-2 flex items-center gap-2">
-                                    <img src="assets/images/users/avatar-8.jpg" alt="table-user"
+                                    <img src="{{ asset('assets/images/users/avatar-8.jpg') }}" alt="table-user"
                                         class="size-9 rounded-full">
                                     <a href="javascript:void(0);" class="font-semibold text-default-800">Kathryn S.
                                         Collier</a>
@@ -166,7 +166,7 @@
                             </tr>
                             <tr class="hover:bg-default-50">
                                 <td class="px-4 py-2 flex items-center gap-2">
-                                    <img src="assets/images/users/avatar-1.jpg" alt="table-user"
+                                    <img src="{{ asset('assets/images/users/avatar-1.jpg') }}" alt="table-user"
                                         class="size-9 rounded-full">
                                     <a href="javascript:void(0);" class="font-semibold text-default-800">Timothy
                                         Kauper</a>
@@ -178,7 +178,7 @@
                             </tr>
                             <tr class="hover:bg-default-50">
                                 <td class="px-4 py-2 flex items-center gap-2">
-                                    <img src="assets/images/users/avatar-5.jpg" alt="table-user"
+                                    <img src="{{ asset('assets/images/users/avatar-5.jpg') }}" alt="table-user"
                                         class="size-9 rounded-full">
                                     <a href="javascript:void(0);" class="font-semibold text-default-800">Zara
                                         Raws</a>
@@ -190,7 +190,7 @@
                             </tr>
                             <tr class="hover:bg-default-50">
                                 <td class="px-4 py-2 flex items-center gap-2">
-                                    <img src="assets/images/users/avatar-6.jpg" alt="table-user"
+                                    <img src="{{ asset('assets/images/users/avatar-6.jpg') }}" alt="table-user"
                                         class="size-9 rounded-full">
                                     <a href="javascript:void(0);" class="font-semibold text-default-800">Mike
                                         John</a>

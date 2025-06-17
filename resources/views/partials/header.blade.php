@@ -10,7 +10,7 @@
 
             <!-- Topbar Brand Logo -->
             <a href="index.html" class="md:hidden flex">
-                <img src="assets/images/logo-sm.png" class="h-5" alt="Small logo">
+                <img src="{{ asset('assets/images/logo-sm.png') }}" class="h-5" alt="Small logo">
             </a>
 
             <!-- Topbar Search -->
@@ -39,28 +39,28 @@
                     class="hs-dropdown-menu duration mt-2 min-w-48 rounded-lg border border-default-200 bg-white p-2 opacity-0 shadow-md transition-[opacity,margin] hs-dropdown-open:opacity-100 hidden">
                     <a href="javascript:void(0);"
                         class="flex items-center gap-2.5 py-2 px-3 rounded-md text-sm text-default-800 hover:bg-default-100">
-                        <img src="assets/images/flags/germany.jpg" alt="user-image" class="h-4">
+                        <img src="{{ asset('assets/images/flags/germany.jpg') }}" alt="user-image" class="h-4">
                         <span class="align-middle">German</span>
                     </a>
 
                     <!-- item-->
                     <a href="javascript:void(0);"
                         class="flex items-center gap-2.5 py-2 px-3 rounded-md text-sm text-default-800 hover:bg-default-100">
-                        <img src="assets/images/flags/italy.jpg" alt="user-image" class="h-4">
+                        <img src="{{ asset('assets/images/flags/italy.jpg') }}" alt="user-image" class="h-4">
                         <span class="align-middle">Italian</span>
                     </a>
 
                     <!-- item-->
                     <a href="javascript:void(0);"
                         class="flex items-center gap-2.5 py-2 px-3 rounded-md text-sm text-default-800 hover:bg-default-100">
-                        <img src="assets/images/flags/spain.jpg" alt="user-image" class="h-4">
+                        <img src="{{ asset('assets/images/flags/spain.jpg') }}" alt="user-image" class="h-4">
                         <span class="align-middle">Spanish</span>
                     </a>
 
                     <!-- item-->
                     <a href="javascript:void(0);"
                         class="flex items-center gap-2.5 py-2 px-3 rounded-md text-sm text-default-800 hover:bg-default-100">
-                        <img src="assets/images/flags/russia.jpg" alt="user-image" class="h-4">
+                        <img src="{{ asset('assets/images/flags/russia.jpg') }}" alt="user-image" class="h-4">
                         <span class="align-middle">Russian</span>
                     </a>
                 </div>
@@ -83,7 +83,7 @@
                     <div class="divide-y divide-default-100">
                         <a href="#" class="flex px-4 py-3 hover:bg-default-100">
                             <div class="flex-shrink-0">
-                                <img class="rounded-full w-11 h-11" src="assets/images/users/avatar-6.jpg"
+                                <img class="rounded-full w-11 h-11" src="{{ asset('assets/images/users/avatar-6.jpg') }}"
                                     alt="Alex image">
                                 <div
                                     class="absolute flex items-center justify-center w-5 h-5 ms-6 -mt-5 bg-green-500 border border-white rounded-full">
@@ -102,7 +102,7 @@
 
                         <a href="#" class="flex px-4 py-3 hover:bg-default-100">
                             <div class="flex-shrink-0">
-                                <img class="rounded-full w-11 h-11" src="assets/images/users/avatar-7.jpg"
+                                <img class="rounded-full w-11 h-11" src="{{ asset('assets/images/users/avatar-7.jpg') }}"
                                     alt="Sarah image">
                                 <div
                                     class="absolute flex items-center justify-center w-5 h-5 ms-6 -mt-5 bg-primary-600 border border-white rounded-full">
@@ -120,7 +120,7 @@
 
                         <a href="#" class="flex px-4 py-3 hover:bg-default-100">
                             <div class="flex-shrink-0">
-                                <img class="rounded-full w-11 h-11" src="assets/images/users/avatar-8.jpg"
+                                <img class="rounded-full w-11 h-11" src="{{ asset('assets/images/users/avatar-8.jpg') }}"
                                     alt="Michael image">
                                 <div
                                     class="absolute flex items-center justify-center w-5 h-5 ms-6 -mt-5 bg-purple-500 border border-white rounded-full">
@@ -138,7 +138,7 @@
 
                         <a href="#" class="flex px-4 py-3 hover:bg-default-100">
                             <div class="flex-shrink-0">
-                                <img class="rounded-full w-11 h-11" src="assets/images/users/avatar-9.jpg"
+                                <img class="rounded-full w-11 h-11" src="{{ asset("assets/images/users/avatar-9.jpg") }}"
                                     alt="Emma image">
                                 <div
                                     class="absolute flex items-center justify-center w-5 h-5 ms-6 -mt-5 bg-pink-500 border border-white rounded-full">
@@ -182,7 +182,7 @@
             <div class="relative">
                 <div class="hs-dropdown relative inline-flex [--placement:bottom-right]">
                     <button type="button" class="hs-dropdown-toggle">
-                        <img src="assets/images/users/avatar-8.jpg" alt="user-image" class="rounded-full h-10">
+                        <img src="{{asset('assets/images/users/avatar-8.jpg')}}" alt="user-image" class="rounded-full h-10">
                     </button>
                     <div
                         class="hs-dropdown-menu duration mt-2 min-w-48 rounded-lg border border-default-200 bg-white p-2 opacity-0 shadow-md transition-[opacity,margin] hs-dropdown-open:opacity-100 hidden">

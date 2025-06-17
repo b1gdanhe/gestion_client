@@ -26,3 +26,5 @@ Route::get('user/dashboard', function () {
 
 
 include __DIR__ . '/auth.php';
+include __DIR__ . '/clients.php';
+include __DIR__ . '/orders.php';
