@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Client;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ClientController extends Controller
 {
@@ -11,54 +13,78 @@ class ClientController extends Controller
      */
     public function index()
     {
-        return view('pages.admin.clients.index');
+        $clients = Client::latest()->paginate(10);
+        return view('pages.admin.clients.index', compact('clients'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
-        //
+        return view('pages.admin.clients.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'first_name' => 'required|string|max:255',
+            'last_name' => 'required|string|max:255',
+            'email' => 'required|email|unique:clients',
+            'phone' => 'nullable|string|max:20',
+            'company' => 'nullable|string|max:255',
+            'title' => 'nullable|string|max:255',
+            'status' => 'boolean',
+            'photo' => 'nullable|image|max:2048',
+        ]);
+
+        if ($request->hasFile('photo')) {
+            $validated['photo_path'] = $request->file('photo')->store('client-photos', 'public');
+        }
+        Client::create($validated);
+
+        return redirect()->route('clients.index')
+            ->with('success', 'Client créé avec succès');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function edit(Client $client)
     {
-        //
+        return view('pages.admin.clients.edit', compact('client'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
+    public function update(Request $request, Client $client)
     {
-        //
+        $validated = $request->validate([
+            'first_name' => 'required|string|max:255',
+            'last_name' => 'required|string|max:255',
+            'email' => 'required|email|unique:clients,email,' . $client->id,
+            'phone' => 'nullable|string|max:20',
+            'company' => 'nullable|string|max:255',
+            'title' => 'nullable|string|max:255',
+            'status' => 'boolean',
+            'photo' => 'nullable|image|max:2048',
+        ]);
+
+        if ($request->hasFile('photo')) {
+            // Delete old photo if exists
+            if ($client->photo_path) {
+                Storage::disk('public')->delete($client->photo_path);
+            }
+            $validated['photo_path'] = $request->file('photo')->store('client-photos', 'public');
+        }
+
+        $client->update($validated);
+
+        return redirect()->route('pages.admin.clients.index')
+            ->with('success', 'Client mis à jour avec succès');
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    public function destroy(Client $client)
     {
-        //
-    }
+        if ($client->photo_path) {
+            Storage::disk('public')->delete($client->photo_path);
+        }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        $client->delete();
+
+        return redirect()->route('pages.admin.clients.index')
+            ->with('success', 'Client supprimé avec succès');
     }
 }

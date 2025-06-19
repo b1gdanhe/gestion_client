@@ -17,7 +17,7 @@
                             passe</label>
                         <input type="password" id="example-password" class="form-input" value="password" name="password">
                     </div>
-                    <button class="bg-blue-600 text-white p-2 rounded font-bold">Se connnecter</button>
+                    <button class="bg-slate-800 text-white p-2 rounded font-bold">Se connnecter</button>
                 </div>
             </form>
         </div>
